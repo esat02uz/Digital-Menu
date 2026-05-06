@@ -277,3 +277,31 @@ urunler.forEach(function (urun) {
         icecekListe += taslak;
     }
 });
+
+
+// --- GÖRÜNTÜLEME VE FİLTRELEME FONKSİYONLARI ---
+
+// Bu fonksiyonlar, HTML tarafındaki butonların 'onclick' olayına bağlıdır.
+// İlgili kategori değişkenindeki (string) veriyi DOM'a (HTML'e) aktarır.
+
+function tumuGoster() {
+    document.getElementById("menu").innerHTML = urunListe;
+}
+// Uygulama başlatıldığında varsayılan olarak tüm ürünlerin listelenmesi sağlanır.
+tumuGoster();
+
+function kahvaltiGoster() {
+    document.getElementById("menu").innerHTML = kahvaltiListe;
+}
+
+function aperatifGoster() {
+    document.getElementById("menu").innerHTML = aperatifListe;
+}
+
+function tatliGoster() {
+    document.getElementById("menu").innerHTML = tatliListe;
+}
+
+function icecekGoster() {
+    document.getElementById("menu").innerHTML = icecekListe;
+}
