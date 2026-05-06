@@ -1,0 +1,248 @@
+/* --- GENEL SIFIRLAMA VE TEMEL AYARLAR --- */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /* Kutunun genişliği ve yüksekliği hesaplanırken; padding ve border değerlerini bu ölçüye dahil eder, dışarı taşırmaz*/
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    background-color: #e8e8e8;
+}
+
+
+/* --- HEADER & NAVİGASYON (Sticky Yapı) --- */
+
+.head-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    /* Sayfayı kaydırırken en üste sabitler */
+    position: sticky;
+    top: 0px;
+
+    /* Diğerlerinden daha üstte görünmesini sağlar*/
+    z-index: 100;
+
+    /*Gölgenin yatay mesafe-dikey mesafe-bulanıklık seviyesi-yayılma miktarı(negatif ise azalır)-renk*/
+    box-shadow: 0 5px 5px -3px rgb(191, 191, 191);
+    background-color: #e7e3d0;
+}
+
+.title {
+    margin-top: 60px;
+    width: 150px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: #501530 solid 4px;
+    color: #501530;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 5px;
+    gap: 15px;
+    width: 100%;
+    background-color: #e7e3d0;
+}
+
+.navbar button {
+    padding: 8px;
+    border: #501530 solid 2px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #501530;
+    background-color: #e7e3d0;
+    /* Transition: Renk geçişlerini yumuşatarak UI deneyimini iyileştirir. */
+    transition: 0.4s;
+
+}
+
+.navbar button:hover {
+    /* Fare imlecini el işaretine (tıklanabilir sembolüne) dönüştürür */
+    cursor: pointer;
+    color: #e7e3d0;
+    background-color: #501530;
+}
+
+
+/* sayfa ilk açıldığında aktif buton haline gelme */
+.navbar button.active {
+    color: #e7e3d0;
+    background-color: #501530;
+}
+
+
+/* --- MENÜ İÇERİK ALANI --- */
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0px 100px 0px;
+    gap: 20px;
+    min-height: 600px;
+    background-color: #e8e8e8;
+}
+
+.menu-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+}
+
+.menu-items {
+    display: flex;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(190, 190, 190);
+    background-color: #f0f0f0;
+    transition: 0.4s;
+}
+
+.menu-items:hover {
+    cursor: pointer;
+    /* Üzerine gelince kartı hafifçe büyütür (Hover efekti). */
+    transform: scale(1.05);
+}
+
+
+/* --- ÜRÜN DETAYLARI (Fotoğraf & Bilgi) --- */
+
+.photo-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 30px 20px 30px 30px;
+}
+
+.photo {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px rgb(190, 190, 190);
+}
+
+.photo img {
+    /* En-boy oranı korunarak görüntü kapsayıcıyı (.photo) doldurur */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 30px 30px 15px;
+    /* burada width'i belirtmediğimizde alana yayılmıyor sadece içeriği kadar yer kaplıyor */
+    width: 100%;
+}
+
+.info-1 {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    gap: 20px;
+    border-bottom: #501530 dashed 2px;
+}
+
+.name {
+    padding: 5px 0px 5px 0px;
+    width: 80%;
+    font-size: 1rem;
+    color: #46132a;
+}
+
+.price {
+    margin-bottom: 5px;
+    padding: 5px 0px 5px 0px;
+    width: 20%;
+    height: auto;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #501530;
+
+}
+
+.price span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 680;
+    color: #e7e3d0;
+}
+
+.info-2 {
+    width: 95%;
+    height: auto;
+}
+
+.product-desc {
+    padding: 10px 0px 10px 0px;
+    font-size: 0.83rem;
+    font-weight: 500;
+}
+
+.desc {
+    /* Kelimeler ve harfler arası boşluk*/
+    word-spacing: 1.5px;
+    letter-spacing: 0.5px;
+    color: #703a53;
+}
+
+
+/* --- FOOTER & LOGO --- */
+
+.end-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    height: 250px;
+    background-color: #501530;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo img:hover {
+    cursor: pointer;
+}
+
+.logo a {
+    text-decoration: none;
+    /* Alt çizgiyi kaldırır */
+}
+
+.end-info {
+    /* 1 rem = 16px (Varsayılan tarayıcı font boyutu üzerinden hesaplanır) */
+    font-size: 1rem;
+    text-align: center;
+    color: #e7e3d0;
+}
