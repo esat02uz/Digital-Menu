@@ -163,7 +163,7 @@
     padding: 5px 0px 5px 0px;
     width: 80%;
     font-size: 1rem;
-    color: #46132a;
+    color: #501530;
 }
 
 .price {
@@ -201,7 +201,7 @@
     /* Kelimeler ve harfler arası boşluk*/
     word-spacing: 1.5px;
     letter-spacing: 0.5px;
-    color: #703a53;
+    color: #501530;
 }
 
 
@@ -252,7 +252,7 @@
 /* --- MOBİL UYUMLULUK (MEDIA QUERIES) --- */
 
 /* Telefon Ekranları (max 480px)
-(480px'e göre ayarlandı) */
+(375px'e göre ayarlandı) */
 @media screen and (max-width:480px) {
 
     .head-page {
@@ -266,12 +266,12 @@
     }
 
     .navbar {
-        padding: 18px;
-        gap: 11px;
+        padding: 12px;
+        gap: 7px;
     }
 
     .navbar button {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .menu-container {
@@ -305,6 +305,11 @@
 
     .name {
         font-size: 0.8rem;
+        width: 75%;
+    }
+
+    .price {
+        width: 25%;
     }
 
     .price span {
