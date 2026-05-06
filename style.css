@@ -272,6 +272,7 @@
     }
 
     .navbar button {
+        border: #501530 solid 1.75px;
         font-size: 0.75rem;
     }
 
