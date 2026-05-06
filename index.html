@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- SEO ve tarayıcı bilgileri -->
+    <meta name="description" content="Cafe Dijital Menü">
+    <meta name="keywords" content="cafe, menü, dijital menü, qr menü, kahvaltı, aperatif, tatlı, içecek">
+    <meta name="author" content="Digital Menu">
+
+    <!-- Sayfanın tüm cihazlarda (mobil/tablet) düzgün görünmesi için -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cafe | Dijital Menü</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Sayfa Kapsayıcısı: İçeriği toplu tutmak ve hizalamak için ana kutu -->
+    <div class="container">
+
+        <!-- Head / Sayfa Başlığı: Logo ve Kategori butonlarının alanı -->
+        <header class="head-page">
+            <h1 class="title">Menümüz</h1>
+
+            <!-- Navigation / Kategori / Buton: Filtreleme butonlarını nav içinde gruplama-->
+            <nav class="navbar">
+                <!-- onclick: Tıklandığında JS fonksiyonlarını çalıştırıp menüyü günceller -->
+                <button id="btn-tumu" class="filter-btn active" type="button"
+                    onclick="tumuGoster(); tumuAktif();">Tümü</button>
+                <button id="btn-kahvalti" class="filter-btn" type="button"
+                    onclick="kahvaltiGoster(); kahvaltiAktif();">Kahvaltı</button>
+                <button id="btn-aperatif" class="filter-btn" type="button"
+                    onclick="aperatifGoster(); aperatifAktif();">Aperatif</button>
+                <button id="btn-tatli" class="filter-btn" type="button"
+                    onclick="tatliGoster(); tatliAktif();">Tatlı</button>
+                <button id="btn-icecek" class="filter-btn" type="button"
+                    onclick="icecekGoster(); icecekAktif();">İçecek</button>
+            </nav>
+        </header>
+
+        <!-- Main / Kapsayıcı / Menü / Ürünler: JS ile gelen ürün kartları bu id içine basılacak -->
+        <main id="menu" class="menu-container">
+            <!-- Dinamik içerik alanı: Sayfa boş görünür, JS ile dolar -->
+            <!-- <section class="menu-card"> ... </section> -->
+        </main>
+
+        <!-- Footer / Logo / Copyright: Sayfanın en alt bitiş kısmı -->
+        <footer class="end-page">
+            <div class="logo">
+                <!-- href="#": Kullanıcıyı tekrar sayfanın başına yönlendirir --> <a href="#" title="Menüye Dön"><img
+                        src="/image/logo.png" alt="cafe-logo"></a>
+            </div>
+            <p class="end-info">Digital Menu &copy; 2026 </p>
+        </footer>
+    </div>
+
+     <!-- Script bağlantı: HTML yapısı tamamen yüklendikten sonra çalışması için en sona eklendi -->
+    <script src="app.js">
+
+    </script>
+</body>
+
+</html>
