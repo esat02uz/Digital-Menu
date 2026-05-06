@@ -305,3 +305,60 @@ function tatliGoster() {
 function icecekGoster() {
     document.getElementById("menu").innerHTML = icecekListe;
 }
+
+
+// --- KULLANICI DENEYİMİ (UI/UX) - BUTON STİLLERİ ---
+
+// Kullanıcının hangi kategoride olduğunu görsel olarak ayırt edebilmesi için 
+// butonların stil özelliklerini (CSS) dinamik olarak değiştiren fonksiyonlardır.
+
+function pasifYap() {
+    // Tüm kategori butonlarını varsayılan (pasif) renklerine döndürür.
+    document.getElementById("btn-tumu").style.backgroundColor = "#e7e3d0";
+    document.getElementById("btn-tumu").style.color = "#501530";
+
+    document.getElementById("btn-kahvalti").style.backgroundColor = "#e7e3d0";
+    document.getElementById("btn-kahvalti").style.color = "#501530";
+
+    document.getElementById("btn-aperatif").style.backgroundColor = "#e7e3d0";
+    document.getElementById("btn-aperatif").style.color = "#501530";
+
+    document.getElementById("btn-tatli").style.backgroundColor = "#e7e3d0";
+    document.getElementById("btn-tatli").style.color = "#501530";
+
+    document.getElementById("btn-icecek").style.backgroundColor = "#e7e3d0";
+    document.getElementById("btn-icecek").style.color = "#501530";
+}
+
+
+function tumuAktif() {
+    pasifYap(); // Önce diğerlerini sıfırla
+    // Seçili butonu vurgula (aktif renk)
+    document.getElementById("btn-tumu").style.backgroundColor = "#501530";
+    document.getElementById("btn-tumu").style.color = "#e7e3d0";
+}
+
+// Diğer aktif fonksiyonları da benzer mantıkla (pasifYap + aktif vurgusu) çalışır.
+function kahvaltiAktif() {
+    pasifYap();
+    document.getElementById("btn-kahvalti").style.backgroundColor = "#501530";
+    document.getElementById("btn-kahvalti").style.color = "#e7e3d0";
+}
+
+function aperatifAktif() {
+    pasifYap();
+    document.getElementById("btn-aperatif").style.backgroundColor = "#501530";
+    document.getElementById("btn-aperatif").style.color = "#e7e3d0";
+}
+
+function tatliAktif() {
+    pasifYap();
+    document.getElementById("btn-tatli").style.backgroundColor = "#501530";
+    document.getElementById("btn-tatli").style.color = "#e7e3d0";
+}
+
+function icecekAktif() {
+    pasifYap();
+    document.getElementById("btn-icecek").style.backgroundColor = "#501530";
+    document.getElementById("btn-icecek").style.color = "#e7e3d0";
+}
