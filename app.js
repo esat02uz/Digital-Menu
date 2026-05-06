@@ -224,3 +224,56 @@ let icecekListe = "";    // Sadece içecek kategorisi için
 
 // 'menu' ID'li kapsayıcı eleman, dinamik içerik eklenmeden önce temizlenir.
 document.getElementById("menu").innerHTML = "";
+
+
+// --- DİNAMİK HTML OLUŞTURMA ---
+
+// forEach döngüsü kullanılarak ürünler dizisi taranır. 
+// Her bir ürün için Template Literals (`...`) yöntemiyle HTML kart tasarımı oluşturulur.
+
+urunler.forEach(function (urun) {
+
+    // 'taslak' değişkeni, o anki döngü turunda işlenen ürünün görsel ve metinsel şablonunu tutar.
+    let taslak = `<section class="menu-card">
+                 <article class="menu-items">
+                     <div class="photo-container">
+                         <div class="photo">
+                             <img src="${urun.img}" alt="${urun.name}">
+                         </div>
+                     </div>
+
+                     <div class="info-container">
+                         <div class="info-1">
+                             <div class="name">
+                                 <h4>${urun.name}</h4>
+                             </div>
+                             <div class="price"><span>${urun.price} ₺</   span></div>
+                         </div>
+                         <div class="info-2">
+                             <div class="product-desc">
+                                 <p class="desc">${urun.desc}</p>
+                             </div>
+                         </div>
+                     </div>
+                 </article>
+             </section>
+`;
+
+    // Üretilen her taslak, 'urunListe' genel değişkenine (+=) operatörü ile eklenerek biriktirilir.
+    urunListe += taslak;
+
+    // Koşullu yapı (if-else) ile ürünün kategorisi kontrol edilir.
+    // Ürün, kendi kategorisine ait değişkene eklenerek ön-filtreleme yapılmış olur.
+    if (urun.category === "kahvalti") {
+        kahvaltiListe += taslak;
+    }
+    else if (urun.category === "aperatif") {
+        aperatifListe += taslak;
+    }
+    else if (urun.category === "tatli") {
+        tatliListe += taslak;
+    }
+    else if (urun.category === "icecek") {
+        icecekListe += taslak;
+    }
+});
