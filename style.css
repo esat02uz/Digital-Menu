@@ -246,3 +246,147 @@
     text-align: center;
     color: #e7e3d0;
 }
+
+
+
+/* --- MOBİL UYUMLULUK (MEDIA QUERIES) --- */
+
+/* Telefon Ekranları (max 480px)
+(480px'e göre ayarlandı) */
+@media screen and (max-width:480px) {
+
+    .head-page {
+        height: 180px;
+    }
+
+    .title {
+        width: 130px;
+        border-bottom: #501530 solid 3.5px;
+        font-size: 1.35rem;
+    }
+
+    .navbar {
+        padding: 18px;
+        gap: 11px;
+    }
+
+    .navbar button {
+        font-size: 0.8rem;
+    }
+
+    .menu-container {
+        margin: 40px 0px 60px 0px;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        gap: 10px;
+        width: 85%;
+    }
+
+    .photo-container {
+        margin: 20px 20px 0px 20px;
+    }
+
+    .photo {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+    }
+
+    .photo img {
+        border-radius: 10px;
+    }
+
+    .info-container {
+        margin: 5px 20px 20px 20px;
+        width: 90%;
+    }
+
+    .name {
+        font-size: 0.8rem;
+    }
+
+    .price span {
+        font-size: 0.8rem;
+    }
+
+    .product-desc {
+        font-size: 0.7rem;
+    }
+
+    .end-page {
+        height: 200px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .end-info {
+        font-size: 0.85rem;
+    }
+}
+
+
+/* Tablet Ekranları (481px - 768px arası) 
+(768px'e göre ayarlandı)*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .head-page {
+        height: 190px;
+    }
+
+    .title {
+        width: 140px;
+        border-bottom: #501530 solid 3.75px;
+        font-size: 1.45rem;
+    }
+
+    .navbar button {
+        font-size: 0.9rem;
+    }
+
+    .menu-container {
+        margin: 40px 0px 80px 0px;
+    }
+
+    .menu-items {
+        width: 85%;
+    }
+
+    .photo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .info-container {
+        width: 95%;
+    }
+
+    .name {
+        font-size: 0.92rem;
+    }
+
+    .price span {
+        font-size: 0.92rem;
+    }
+
+    .product-desc {
+        font-size: 0.82rem;
+    }
+
+    .end-page {
+        height: 225px;
+    }
+
+    .logo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .end-info {
+        font-size: 0.93rem;
+    }
+}
