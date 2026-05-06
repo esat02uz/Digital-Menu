@@ -1,3 +1,39 @@
+/*
+MANTIK AKIŞI
+
+ 1. VERİ HAZIRLIĞI:
+ 'urunler' dizisini const ile sabit tutuyoruz çünkü veri yapısı değişmeyecek.
+ Kategori listelerini (kahvaltiListe vb.) let ile boş oluşturuyoruz çünkü döngü sırasında bu değişkenlerin içine sürekli yeni HTML blokları eklenecek (birikecek).
+
+ 2. EKRAN TEMİZLİĞİ:
+ Döngü başlamadan önce menü alanını innerHTML = "" ile boşaltıyoruz ki her çalıştığında eski verilerin üzerine tekrarlanan kayıt binmesin.
+
+ 3. DÖNGÜ VE ŞABLON OLUŞTURMA (forEach):
+ urunler dizisindeki her bir objeyi 'urun' parametresi olarak ele alıyoruz.
+ - 'let sablon': Her döngü turunda o anki ürün için ÖZEL ve GEÇİCİ bir HTML bloğu oluşturur.
+ - ÖNEMLİ: 'sablon' her seferinde güncellenir; yani yeni ürüne geçince eskisi silinir, yerine güncel olan yazılır. Bu, bizim "anlık üretim" alanımızdır.
+
+ 4. VERİ BİRİKTİRME VE FİLTRELEME:
+ 'sablon' değişkeni henüz silinmeden (yani o tur bitmeden):
+ - urunListe += sablon: Tüm ürünleri hiçbir ayrım yapmadan genel depoda biriktirir.
+ - if/else if: urun.category kontrolü yaparak, ürünü kendi kategorisine ait
+ özel değişkene (örn: kahvaltiListe) += operatörü ile ekler.
+ - += Kullanımı: 'sablon' tek bir ürünü temsil ederken, '+=' bu tekil parçaları uç uca ekleyerek koca bir liste metni oluşturmamızı sağlar.
+
+ 5. FONKSİYONLAR VE ETKİLEŞİM:
+ Döngü bittiğinde elimizde içi dolu, HTML kodlarıyla süslenmiş kategori değişkenleri kalır.
+ - Her buton için ayrı fonksiyonlar yazdık.
+ - Bu fonksiyonlar çalıştığında (onclick), ekrandaki menü alanına gidip ilgili "birikmiş" değişkeni (örn: aperatifListe) innerHTML olarak atar.
+
+ 6. GÖRSEL GERİ BİLDİRİM (BUTON STİLLERİ):
+ Kullanıcının hangi kategoride olduğunu anlaması için butonların CSS özelliklerini .style üzerinden dinamik olarak yönetiyoruz.
+ - pasifYap(): Bir butona tıklandığında, önce tüm butonları 'getElementsById' ile yakalayıp varsayılan renklerine döndürüyoruz (sıfırlama).
+ - Aktif Vurgusu: Sıfırlama işleminden hemen sonra, sadece tıklanan butonun arka plan ve yazı rengini değiştirerek kullanıcının seçimine görsel bir odak noktası oluşturuyoruz.
+*/
+
+// --------------------------------------------------------------------------------------------------------------------------
+
+
 // --- ÜRÜN DİZİSİ OLUŞTURMA ---
 
 // Projede kullanılacak tüm içerik 'urunler' isimli bir dizi (Array) içinde, 
