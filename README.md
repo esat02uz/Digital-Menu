@@ -1,2 +1,2 @@
-Bu projenin ilk sürümüdür (v1.0). 
-Mevcut sürüm üzerinde iyileştirmeler ve güncellemeler yapılacaktır.
+Bu projenin ilk sürümüdür (v1.0). <br>
+Mevcut sürümde güncelleme ve iyileştirmeler yapılacaktır.
