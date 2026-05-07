@@ -10,12 +10,12 @@ MANTIK AKIŞI
 
  3. DÖNGÜ VE ŞABLON OLUŞTURMA (forEach):
  urunler dizisindeki her bir objeyi 'urun' parametresi olarak ele alıyoruz.
- - 'let sablon': Her döngü turunda o anki ürün için ÖZEL ve GEÇİCİ bir HTML bloğu oluşturur.
+ - 'let taslak': Her döngü turunda o anki ürün için ÖZEL ve GEÇİCİ bir HTML bloğu oluşturur.
  - ÖNEMLİ: 'sablon' her seferinde güncellenir; yani yeni ürüne geçince eskisi silinir, yerine güncel olan yazılır. Bu, bizim "anlık üretim" alanımızdır.
 
  4. VERİ BİRİKTİRME VE FİLTRELEME:
  'sablon' değişkeni henüz silinmeden (yani o tur bitmeden):
- - urunListe += sablon: Tüm ürünleri hiçbir ayrım yapmadan genel depoda biriktirir.
+ - urunListe += taslak: Tüm ürünleri hiçbir ayrım yapmadan genel depoda biriktirir.
  - if/else if: urun.category kontrolü yaparak, ürünü kendi kategorisine ait
  özel değişkene (örn: kahvaltiListe) += operatörü ile ekler.
  - += Kullanımı: 'sablon' tek bir ürünü temsil ederken, '+=' bu tekil parçaları uç uca ekleyerek koca bir liste metni oluşturmamızı sağlar.
